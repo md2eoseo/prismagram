@@ -13,7 +13,8 @@ Instagram clone with Express, Prisma, React, and React Native
 - [ ] See the full photo
 - [ ] Edit my profile
 - [x] Create account
-- [ ] Log in
+- [ ] Log in - Request account
+- [ ] Log in - Confirm secret
 - [ ] Upload a photo
 - [ ] Edit the photo (Delete)
 - [ ] See the feed
