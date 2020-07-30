@@ -4,8 +4,9 @@ import mgTransport from "nodemailer-mailgun-transport";
 import jwt from "jsonwebtoken";
 
 export const generateSecret = () => {
-  const randomNumber = Math.floor(Math.random() * adjectives.length);
-  return `${adjectives[randomNumber]} ${nouns[randomNumber]}`;
+  const adjRandomNumber = Math.floor(Math.random() * adjectives.length);
+  const nounRandomNumber = Math.floor(Math.random() * nouns.length);
+  return `${adjectives[adjRandomNumber]} ${nouns[nounRandomNumber]}`;
 };
 
 export const sendMail = (email) => {
