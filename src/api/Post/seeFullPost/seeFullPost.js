@@ -7,6 +7,8 @@ export default {
       isAuthenticated(request);
       const { id } = args;
       const post = await prisma.post({ id });
+      const user = await prisma.post({ id }).user();
+      const files = await prisma.post({ id }).files();
       const comments = await prisma
         .post({ id })
         .comments()
@@ -18,7 +20,7 @@ export default {
       //     })
       //     .aggregate()
       //     .count();
-      return { post, comments, likeCount };
+      return { post, user, files, comments, likeCount };
     },
   },
 };
