@@ -4,7 +4,7 @@ export default {
   Mutation: {
     editUser: async (_, args, { request, isAuthenticated }) => {
       isAuthenticated(request);
-      const { username, email, firstName, lastName, bio } = args;
+      const { username, email, firstName, lastName, bio, avatar } = args;
       const { user } = request;
       // await 써서 const user에 저장하고 return user를 해도되지만 어차피 마지막 요청이라 알아서 서버에서 기다려줌.
       return prisma.updateUser({
@@ -15,6 +15,7 @@ export default {
           firstName,
           lastName,
           bio,
+          avatar,
         },
       });
     },
