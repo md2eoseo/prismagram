@@ -28,5 +28,10 @@ export default {
       //     .count();
       return count;
     },
+    commentCount: (parent) =>
+      prisma
+        .commentsConnection({ where: { post: { id: parent.id } } })
+        .aggregate()
+        .count(),
   },
 };
