@@ -1,6 +1,6 @@
 type User {
   id: ID! @id
-  avatar: String
+  avatar: String @default(value:"https://freepikpsd.com/wp-content/uploads/2019/10/default-profile-image-png-1-Transparent-Images.png")
   username: String! @unique
   email: String! @unique
   firstName: String @default(value: "")
